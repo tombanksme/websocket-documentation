@@ -10,13 +10,13 @@ Handle incoming `pong` frame.
 import { Connection, FrameInterface } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
-	/**
-	 * Handle pong frame.
-	 *
-	 * @param frame
-	 */
-	onPong(frame: FrameInterface) {
-		// ...
-	}
+    /**
+     * Handle pong frame.
+     *
+     * @param frame
+     */
+    onPong(frame: FrameInterface) {
+        // ...
+    }
 }
 ```

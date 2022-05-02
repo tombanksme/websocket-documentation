@@ -15,17 +15,17 @@ import { IncomingMessage } from "http";
 import { Server } from "@tombanksme/websockets";
 
 class AuthorizationServer extends Server {
-	/**
-	 * Authorize an upgrade.
-	 *
-	 * @param req The incoming HTTP request
-	 */
-	protected authorizeUpgrade(req: IncomingMessage) {
-		if (req.headers["Authorization"] === "Bearer ...") {
-			return true;
-		}
+    /**
+     * Authorize an upgrade.
+     *
+     * @param req The incoming HTTP request
+     */
+    protected authorizeUpgrade(req: IncomingMessage) {
+        if (req.headers["Authorization"] === "Bearer ...") {
+            return true;
+        }
 
-		return false;
-	}
+        return false;
+    }
 }
 ```

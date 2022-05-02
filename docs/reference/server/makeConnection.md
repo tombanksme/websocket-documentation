@@ -11,13 +11,13 @@ import { Duplex } from "stream";
 import { Server, ConnectionInterface } from "@tombanksme/websockets";
 
 class CustomServer extends Server {
-	/**
-	 * Make a connection.
-	 *
-	 * @param sock The connection socket
-	 */
-	makeConnection(sock: Duplex): ConnectionInterface {
-		return new CustomConnection(this, sock);
-	}
+    /**
+     * Make a connection.
+     *
+     * @param sock The connection socket
+     */
+    makeConnection(sock: Duplex): ConnectionInterface {
+        return new CustomConnection(this, sock);
+    }
 }
 ```

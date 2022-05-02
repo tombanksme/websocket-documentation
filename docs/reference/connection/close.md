@@ -15,10 +15,10 @@ import { Duplex } from "stream";
 import { Server, Connection } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
-	constructor(server: Server, sock: Duplex) {
-		super(server, sock);
+    constructor(server: Server, sock: Duplex) {
+        super(server, sock);
 
-		this.close(); // Sends 'close' frame.
-	}
+        this.close(); // Sends 'close' frame.
+    }
 }
 ```

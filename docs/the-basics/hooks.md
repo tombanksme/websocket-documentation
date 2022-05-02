@@ -8,8 +8,8 @@ Hello World.
 
 Connection:
 
-- onFrame
-- onPing
-- onPong
-- onMessage
-- onClose
+-   onFrame
+-   onPing
+-   onPong
+-   onMessage
+-   onClose

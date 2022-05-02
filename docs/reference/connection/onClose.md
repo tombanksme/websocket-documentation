@@ -10,17 +10,17 @@ Handle incoming `close` frame.
 import { Connection, FrameInterface } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
-	/**
-	 * Handle close frame.
-	 *
-	 * @param frame
-	 */
-	onClose(frame: FrameInterface) {
-		if (!this.sock.destroyed) {
-			this.sock.destroy();
-		}
+    /**
+     * Handle close frame.
+     *
+     * @param frame
+     */
+    onClose(frame: FrameInterface) {
+        if (!this.sock.destroyed) {
+            this.sock.destroy();
+        }
 
-		this.server.delConection(this);
-	}
+        this.server.delConection(this);
+    }
 }
 ```

@@ -20,16 +20,16 @@ import { Server } from "@tombanksme/websockets";
 import HeartbeatConnection from "./HeartbeatConnection";
 
 export class HeartbeatServer extends Server {
-	/**
-	 * Make a new connection.
-	 *
-	 * @param req
-	 * @param sock
-	 * @param head
-	 */
-	makeConnection(req, sock, head) {
-		return new HeartbeatConnection(this, sock);
-	}
+    /**
+     * Make a new connection.
+     *
+     * @param req
+     * @param sock
+     * @param head
+     */
+    makeConnection(req, sock, head) {
+        return new HeartbeatConnection(this, sock);
+    }
 }
 
 export default HeartbeatServer;
@@ -47,28 +47,28 @@ import { Duplex } from "duplex";
 import { Connection, ServerInterface } from "@tombanksme/websockets";
 
 export class HeartbeatConnection extends Connection {
-	protected heartbeat = 0;
+    protected heartbeat = 0;
 
-	protected heartbeatCount = 0;
+    protected heartbeatCount = 0;
 
-	constructor(protected svr: ServerInterface, protected sock: Duplex) {
-		super(svr, sock);
+    constructor(protected svr: ServerInterface, protected sock: Duplex) {
+        super(svr, sock);
 
-		this.heartbeat = setTimeout(() => {
-			this.ping();
-		}, 10000);
-	}
+        this.heartbeat = setTimeout(() => {
+            this.ping();
+        }, 10000);
+    }
 
-	/**
-	 * Handle pong frame.
-	 *
-	 * @param frame The incoming frame
-	 */
-	onPong(frame) {
-		this.heartbeatCount++;
+    /**
+     * Handle pong frame.
+     *
+     * @param frame The incoming frame
+     */
+    onPong(frame) {
+        this.heartbeatCount++;
 
-		console.log(`Heartbeat count: ${this.heartbeatCount}`);
-	}
+        console.log(`Heartbeat count: ${this.heartbeatCount}`);
+    }
 }
 
 export default HeartbeatConnection;
@@ -82,7 +82,7 @@ Finally we can import our `HeartbeatServer` and start it; listening for connecti
 import HeartbeatServer from "./server";
 
 const server = new HeartbeatServer({
-	port: 8080,
+    port: 8080,
 });
 ```
 

@@ -11,19 +11,19 @@ and clear them here.
 
 Destroys the connection.
 
-- Send a `close` frame
-- Destroy the socket
-- Deletes the connection from the server
+-   Send a `close` frame
+-   Destroy the socket
+-   Deletes the connection from the server
 
 ```typescript title="/src/CustomConnection.ts"
 import { Duplex } from "stream";
 import { Server, Connection } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
-	constructor(server: Server, sock: Duplex) {
-		super(server, sock);
+    constructor(server: Server, sock: Duplex) {
+        super(server, sock);
 
-		this.destory(); // Sends 'close' frame and destroys socket.
-	}
+        this.destory(); // Sends 'close' frame and destroys socket.
+    }
 }
 ```

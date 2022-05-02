@@ -11,12 +11,12 @@ import { Duplex } from "stream";
 import { Server, Connection } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
-	constructor(server: Server, sock: Duplex) {
-		super(server, sock);
+    constructor(server: Server, sock: Duplex) {
+        super(server, sock);
 
-		setInterval(() => {
-			this.ping(); // Send 'ping' frame.
-		}, 5000);
-	}
+        setInterval(() => {
+            this.ping(); // Send 'ping' frame.
+        }, 5000);
+    }
 }
 ```

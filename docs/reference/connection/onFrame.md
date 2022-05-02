@@ -15,20 +15,20 @@ Handle all incoming frames.
 import { Connection, FrameInterface } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
-	/**
-	 * Handle incoming frame.
-	 *
-	 * @param frame
-	 */
-	onFrame(frame: FrameInterface) {
-		switch (frame.getOp()) {
-			case Opcode.PING:
-				this.onPing(frame);
-				break;
-			case Opcode.PONG:
-				this.onPong(frame);
-				break;
-		}
-	}
+    /**
+     * Handle incoming frame.
+     *
+     * @param frame
+     */
+    onFrame(frame: FrameInterface) {
+        switch (frame.getOp()) {
+            case Opcode.PING:
+                this.onPing(frame);
+                break;
+            case Opcode.PONG:
+                this.onPong(frame);
+                break;
+        }
+    }
 }
 ```

@@ -8,13 +8,13 @@ sidebar_position: 5
 import { Connection } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
-	/**
-	 * Handle incoming message.
-	 *
-	 * @param message
-	 */
-	onMessage(message: Message) {
-		// Application logic here.
-	}
+    /**
+     * Handle incoming message.
+     *
+     * @param message
+     */
+    onMessage(message: Message) {
+        // Application logic here.
+    }
 }
 ```

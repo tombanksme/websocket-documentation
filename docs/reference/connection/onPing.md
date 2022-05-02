@@ -15,13 +15,13 @@ Handle incoming `ping` frame.
 import { Connection, FrameInterface } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
-	/**
-	 * Handle ping frame.
-	 *
-	 * @param frame
-	 */
-	onPing(frame: FrameInterface) {
-		this.pong();
-	}
+    /**
+     * Handle ping frame.
+     *
+     * @param frame
+     */
+    onPing(frame: FrameInterface) {
+        this.pong();
+    }
 }
 ```

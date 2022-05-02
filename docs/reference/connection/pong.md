@@ -10,8 +10,8 @@ Send a `pong` frame.
 import { Connection } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
-	onPing(frame: FrameInterface) {
-		this.pong(); // Send 'pong' frame.
-	}
+    onPing(frame: FrameInterface) {
+        this.pong(); // Send 'pong' frame.
+    }
 }
 ```
