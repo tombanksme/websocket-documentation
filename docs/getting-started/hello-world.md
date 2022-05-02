@@ -16,7 +16,7 @@ We will need to override the `makeConnection` method to return an instance of ou
 `HeartbeatConnection` which we will create in the next section.
 
 ```typescript title="/src/server.ts"
-import { Server } from "@tombanksme/websocket";
+import { Server } from "@tombanksme/websockets";
 import HeartbeatConnection from "./HeartbeatConnection";
 
 export class HeartbeatServer extends Server {
@@ -44,7 +44,7 @@ heartbeat count; and print the current count to the console.
 
 ```typescript title="/src/connection.ts"
 import { Duplex } from "duplex";
-import { Connection, ServerInterface } from "@tombanksme/websocket";
+import { Connection, ServerInterface } from "@tombanksme/websockets";
 
 export class HeartbeatConnection extends Connection {
 	protected heartbeat = 0;

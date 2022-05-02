@@ -12,7 +12,7 @@ and assembling messages from frame fragments.
 Handle all incoming frames.
 
 ```typescript title="/src/CustomConnection.ts"
-import { Connection, FrameInterface } from "@tombanksme/websocket";
+import { Connection, FrameInterface } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
 	/**

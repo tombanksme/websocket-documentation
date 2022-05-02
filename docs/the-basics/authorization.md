@@ -12,7 +12,7 @@ false.
 
 ```typescript title="/src/AuthorizationServer.ts"
 import { IncomingMessage } from "http";
-import { Server } from "@tombanksme/websocket";
+import { Server } from "@tombanksme/websockets";
 
 class AuthorizationServer extends Server {
 	/**

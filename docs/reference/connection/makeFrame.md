@@ -11,7 +11,7 @@ import {
 	Connection,
 	FrameParameters,
 	FrameInterface,
-} from "@tombanksme/websocket";
+} from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
 	/**

@@ -7,7 +7,7 @@ sidebar_position: 4
 Handle incoming `pong` frame.
 
 ```typescript title='/src/CustomConnection.ts'
-import { Connection, FrameInterface } from "@tombanksme/websocket";
+import { Connection, FrameInterface } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
 	/**

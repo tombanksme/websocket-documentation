@@ -12,7 +12,7 @@ that you application is not RFC 6455 compliant.
 Handle incoming `ping` frame.
 
 ```typescript title='/src/CustomConnection.ts'
-import { Connection, FrameInterface } from "@tombanksme/websocket";
+import { Connection, FrameInterface } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
 	/**

@@ -8,7 +8,7 @@ The default connection class comes with an onMessage hook, which you can use to 
 text and binary messages from your client.
 
 ```typescript title="/src/MessageConnection.ts"
-import { Connection, Message, MessageType } from "@tombanksme/websocket";
+import { Connection, Message, MessageType } from "@tombanksme/websockets";
 
 class MessageConnection extends Connection {
 	/**

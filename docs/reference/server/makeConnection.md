@@ -8,7 +8,7 @@ sidebar_position: 4
 import CustomConnection from "./CustomConnection";
 
 import { Duplex } from "stream";
-import { Server, ConnectionInterface } from "@tombanksme/websocket";
+import { Server, ConnectionInterface } from "@tombanksme/websockets";
 
 class CustomServer extends Server {
 	/**
