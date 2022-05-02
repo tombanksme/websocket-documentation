@@ -4,5 +4,5 @@ sidebar_position: 5
 
 # Extensions
 
-During the WebSocket handshake, the client and server can agree on an extension to the
-protocol to use.
+In the current version of this library, writing extensions is an extremely involved
+process. We are addressing this in a future version with the introduction of a ProtocolDriver.

@@ -4,7 +4,11 @@ sidebar_position: 2
 
 # Authorization
 
-You may want to limit connections to your WebSocket server to a specific group of people. To do this override the `authorizeUpgrade` function and return `true` or `false`.
+For some services, you may want to authorize upgrade requests. With this library, this
+task is simple.
+
+Simply override the authorizeUpgrade function to your Server class and return true or
+false.
 
 ```typescript title="/src/AuthorizationServer.ts"
 import { IncomingMessage } from "http";
@@ -17,7 +21,7 @@ class AuthorizationServer extends Server {
 	 * @param req The incoming HTTP request
 	 */
 	protected authorizeUpgrade(req: IncomingMessage) {
-		if (req.headers["Authorization"]) {
+		if (req.headers["Authorization"] === "Bearer ...") {
 			return true;
 		}
 

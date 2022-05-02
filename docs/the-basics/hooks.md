@@ -4,4 +4,12 @@ sidebar_position: 1
 
 # Hooks
 
-This will contain some rambling about hooks
+Hello World.
+
+Connection:
+
+- onFrame
+- onPing
+- onPong
+- onMessage
+- onClose
