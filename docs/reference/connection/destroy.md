@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 11
 ---
 
 # destroy
@@ -9,10 +9,10 @@ If you have registered any intervals you should override the destroy function
 and clear them here.
 :::
 
-Destroys the connection.
+This method destroys the connection by:
 
--   Send a `close` frame
--   Destroy the socket
+-   Sending a `close` frame
+-   Destroys the socket
 -   Deletes the connection from the server
 
 ```typescript title="/src/CustomConnection.ts"

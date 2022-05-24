@@ -4,8 +4,10 @@ sidebar_position: 5
 
 # onMessage
 
+Handle incoming message.
+
 ```typescript title="/src/CustomConnection.ts"
-import { Connection } from "@tombanksme/websockets";
+import { Connection, Message } from "@tombanksme/websockets";
 
 class CustomConnection extends Connection {
     /**

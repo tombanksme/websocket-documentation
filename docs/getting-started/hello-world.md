@@ -79,11 +79,14 @@ export default HeartbeatConnection;
 Finally we can import our `HeartbeatServer` and start it; listening for connections on port 8080.
 
 ```typescript title="/src/index.ts"
+import Http from "http";
 import HeartbeatServer from "./server";
 
-const server = new HeartbeatServer({
-    port: 8080,
-});
+const http = Http.createServer();
+
+const server = new HeartbeatServer(http);
+
+http.listen(8080);
 ```
 
 ### Congratulations!

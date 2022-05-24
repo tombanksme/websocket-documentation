@@ -1,10 +1,8 @@
 ---
-sidebar_position: 12
+sidebar_position: 1
 ---
 
-# makeFrame
-
-This factory method specifies which [Frame](/docs/reference/frame/constructor) the Connection will use.
+# constructor
 
 ```typescript title='/src/CustomConnection.ts'
 import CustomFrame from "./CustomFrame";
